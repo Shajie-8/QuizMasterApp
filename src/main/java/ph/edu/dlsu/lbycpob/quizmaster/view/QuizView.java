@@ -86,7 +86,7 @@ public class QuizView {
         muteButton = new Button("Mute Sounds");
         muteButton.getStyleClass().add("secondary-button");
 
-        menuRoot.getChildren().addAll(titleLabel, subtitleLabel, categoryComboBox, startButton, statsButton);
+        menuRoot.getChildren().addAll(titleLabel, subtitleLabel, categoryComboBox, startButton, statsButton, muteButton);
         menuScene = new Scene(menuRoot, 800, 660);
     }
 
@@ -384,4 +384,5 @@ public class QuizView {
     public Button getMenuButton() { return menuButton; }
     public ToggleGroup getOptionsGroup() { return optionsGroup; }
     public List<RadioButton> getOptionButtons() { return optionButtons; }
+    public Button getMuteButton() { return muteButton; }
 }
