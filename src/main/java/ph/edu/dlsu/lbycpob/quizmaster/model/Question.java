@@ -12,8 +12,14 @@ public class Question {
     private List<String> options;
     private String equation;
 
+    // UNDERSTAND: Constructor to initialize all fields of the Question object.
+    // DECISION: Instantiating options as a new ArrayList to make a defensive copy and avoid reference sharing.
     public Question(String category, String questionText, List<String> options, int correctAnswer, String equation) {
-        // TODO:
+        this.category = category;
+        this.questionText = questionText;
+        this.options = new ArrayList<>(options);
+        this.correctAnswer = correctAnswer;
+        this.equation = equation;
     }
 
     // Getters
