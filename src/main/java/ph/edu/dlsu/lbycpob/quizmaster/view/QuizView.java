@@ -24,6 +24,7 @@ public class QuizView {
     private ComboBox<String> categoryComboBox;
     private Button startButton;
     private Button statsButton;
+    private Button muteButton;
 
     // Quiz components
     private Label questionLabel, timerLabel, scoreLabel, equationLabel;
@@ -81,6 +82,9 @@ public class QuizView {
 
         statsButton = new Button("View Statistics");
         statsButton.getStyleClass().add("secondary-button");
+
+        muteButton = new Button("Mute Sounds");
+        muteButton.getStyleClass().add("secondary-button");
 
         menuRoot.getChildren().addAll(titleLabel, subtitleLabel, categoryComboBox, startButton, statsButton);
         menuScene = new Scene(menuRoot, 800, 660);
