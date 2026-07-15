@@ -22,11 +22,48 @@ public class Question {
         this.equation = equation;
     }
 
-    // Getters
-    // TODO:
+    // UNDERSTAND: Getter/Setter methods to provide controlled access to private data members.
+    // DECISION: Returning a defensive copy of the option list to preserve the immutability of the inner state.
+    public int getCorrectAnswer() {
+        return correctAnswer;
+    }
 
-    // Setters
-    // TODO:
+    public void setCorrectAnswer(int correctAnswer) {
+        this.correctAnswer = correctAnswer;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getQuestionText() {
+        return questionText;
+    }
+
+    public void setQuestionText(String questionText) {
+        this.questionText = questionText;
+    }
+
+    public List<String> getOptions() {
+        return new ArrayList<>(options);
+    }
+
+    public void setOptions(List<String> options) {
+        this.options = new ArrayList<>(options);
+    }
+
+    public String getEquation() {
+        return equation;
+    }
+
+    public void setEquation(String equation) {
+        this.equation = equation;
+    }
+
 
     @Override
     public String toString() {
