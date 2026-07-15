@@ -5,7 +5,12 @@ import java.util.List;
 
 // Question.java
 public class Question {
-   // TODO: Add the data attributes
+    // UNDERSTAND: Private variables to prevent external classes from directly modifying internal state (Encapsulation).
+    private int correctAnswer;
+    private String category;
+    private String questionText;
+    private List<String> options;
+    private String equation;
 
     public Question(String category, String questionText, List<String> options, int correctAnswer, String equation) {
         // TODO:
