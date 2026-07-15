@@ -67,7 +67,14 @@ public class Question {
 
     @Override
     public String toString() {
-        return " "; // TODO:
+        // UNDERSTAND: Generates a string representation of the object's current state.
+        // DECISION: Concatenates fields for readable debug log outputs.
+        return "Question{" +
+                "category='" + category + '\'' +
+                ", questionText='" + questionText + '\'' +
+                ", options=" + options +
+                ", correctAnswer=" + correctAnswer +
+                ", equation='" + equation + '\'' +
+                '}';
     }
 }
-
