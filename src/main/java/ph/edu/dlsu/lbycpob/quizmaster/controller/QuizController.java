@@ -37,6 +37,7 @@ public class QuizController {
         view.setCategories(model.getCategories());
         view.showMenuScene();
         primaryStage.show();
+        view.getMuteButton().setOnAction(e -> toggleMute());
     }
 
     private void setupEventHandlers() {
@@ -190,5 +191,13 @@ public class QuizController {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    private void toggleMute() {
+        // UNDERSTAND: Toggles play state of audio resources using AudioClipManager.
+        // DECISION: Using a centralized manager simplifies state modifications.
+        ph.edu.dlsu.lbycpob.quizmaster.utils.AudioClipManager.getInstance().toggleMute();
+        boolean isMuted = ph.edu.dlsu.lbycpob.quizmaster.utils.AudioClipManager.getInstance().isMuted();
+        view.getMuteButton().setText(isMuted ? "Unmute Sounds" : "Mute Sounds");
     }
 }
